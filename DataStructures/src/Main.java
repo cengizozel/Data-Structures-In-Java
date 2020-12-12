@@ -1,8 +1,9 @@
 public class Main {
-
+ 
 	public static void main(String[] args) {
 		
 		/*
+		// Linked Lists
 		LinkedList list = new LinkedList();
 		list.insert(1);
 		list.insert(2);
@@ -17,6 +18,7 @@ public class Main {
 		*/
 		
 		/*
+		// Stacks
 		Stack stack = new Stack();
 		System.out.println("Stack is empty: " + stack.isEmpty());
 		
@@ -46,6 +48,22 @@ public class Main {
 		stack.pop();
 		stack.pop();
 		stack.show();
+		*/
+		
+		/*
+		// Queues
+		Queue queue = new Queue();
+		System.out.println("Queue is empty: " + queue.isEmpty());
+		
+		queue.enQueue(1);
+		queue.enQueue(2);
+		queue.enQueue(3);
+		queue.show();
+		
+		queue.deQueue();
+		queue.show();
+		System.out.println("Size: " + queue.size());
+		System.out.println("Queue is empty: " + queue.isEmpty());
 		*/
 	}
 	

@@ -1,4 +1,4 @@
-
+ 
 public class Stack {
 	int max=5;
 	int stack[] = new int[max];
