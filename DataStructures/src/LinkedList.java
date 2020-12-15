@@ -1,5 +1,10 @@
 public class LinkedList {
  
+	public class Node {
+		int data;
+		Node next;
+	}
+	
 	Node head;
 	
 	public void insert(int data) {
