@@ -1,7 +1,5 @@
 public class BinaryTree {
 	
-	TreeNode root;
-	
 	class TreeNode {
 		TreeNode left;
 		TreeNode right;
@@ -11,6 +9,8 @@ public class BinaryTree {
 			this.data = data;
 		}
 	}
+	
+	TreeNode root;
 	
 	public void createBinaryTree() {
 		TreeNode first = new TreeNode(1);
@@ -27,4 +27,40 @@ public class BinaryTree {
 		second.right = fifth;
 	}
 	
+	public void preOrder(TreeNode root) {
+		if(root == null) {
+			return;
+		}
+		else {
+			System.out.print(root.data + " ");
+			preOrder(root.left);
+			preOrder(root.right);
+		}
+	}
+	
+	public void inOrder(TreeNode root) {
+		if(root == null) {
+			return;
+		}
+		else {
+			inOrder(root.left);
+			System.out.print(root.data + " ");
+			inOrder(root.right);
+		}
+	}
+	
+	public void postOrder(TreeNode root) {
+		if(root == null) {
+			return;
+		}
+		else {
+			postOrder(root.left);
+			postOrder(root.right);
+			System.out.print(root.data + " ");
+		}
+	}
+	
+	public void levelOrder(TreeNode root) {
+		return;
+	}
 }

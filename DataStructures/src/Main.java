@@ -65,6 +65,15 @@ public class Main {
 		System.out.println("Size: " + queue.size());
 		System.out.println("Queue is empty: " + queue.isEmpty());
 		*/
+		
+		// Binary Tree
+		BinaryTree bt = new BinaryTree();
+		bt.createBinaryTree();
+		bt.preOrder(bt.root);
+		System.out.println(" ");
+		bt.inOrder(bt.root);
+		System.out.println(" ");
+		bt.postOrder(bt.root);
 	}
 	
 }
