@@ -1,51 +1,73 @@
- 
 public class Stack {
-	int max=5;
-	int stack[] = new int[max];
-	int top = 0;
+	
+	Node head;
 	
 	public void push(int data) {
-		if (top == max) {
-			System.out.println("Stack is full.");
+		Node node = new Node();
+		node.data = data;
+		node.next = null;
+		
+		if(head==null) {
+			head = node;
 		}
 		else {
-			stack[top] = data;
-			top++;
+			Node n = head;
+			while(n.next!=null) {
+				n = n.next;
+			}
+			n.next = node;
 		}
 	}
 	
-	public int pop() {
-		int data = 0;
-		
-		if (isEmpty()) {
-			System.out.println("Stack is empty.");
+	public void pop() {
+		Node n = head;
+		while(n.next.next!=null) {
+			n = n.next;
 		}
-		else {
-			top--;
-			data = stack[top];
-			stack[top] = 0;
-		}
-		return data;
+		n.next = null;
 	}
+	
 	
 	public int peek() {
-		int data;
-		data = stack[top-1];
-		return data;
+		Node n = head;
+		
+        if (head == null) {
+        	System.out.printf("\nStack is empty.");
+        }
+        else {
+        	while(n.next!=null) {
+        		n = n.next;
+        	}
+        }
+        return n.data;
 	}
 	
+	
 	public int size() {
+		int top = 0;
+		Node n = head;
+		while(n.next!=null) {
+			n = n.next;
+			top++;
+		}
 		return top;
 	}
 	
 	public boolean isEmpty() {
-		return top<=0;
+		return (head==null);
 	}
 	
 	public void show() {
-		for (int n : stack) {
-			System.out.print(n + " ");
-		}
-		System.out.println("");
+        if (head == null) {
+        	System.out.printf("\nStack is empty.");
+        } 
+        else {
+            Node temp = head;
+            while (temp != null) {
+                System.out.printf("%s ", temp.data);
+                temp = temp.next;
+            }
+            System.out.println("");
+        }
 	}
 }

@@ -1,35 +1,55 @@
 public class Queue {
 	 
-	int queue[] = new int[5];
-	int size;
-	int front;
-	int rear;
+	Node head;
 	
 	public void enQueue(int data) {
-		queue[rear] = data;
-		rear++;
-		size++;
+		Node node = new Node();
+		node.data = data;
+		node.next = null;
+		
+		if(head==null) {
+			head = node;
+		}
+		else {
+			Node n = head;
+			while(n.next!=null) {
+				n = n.next;
+			}
+			n.next = node;
+		}
 	}
 	
-	public int deQueue() {
-		int data = queue[front];
-		front++;
-		size--;
-		return data;
+	public void deQueue() {
+		Node n = head;
+		head = n.next;
 	}
 	
 	public int size() {
-		return size;
+		int top = 0;
+		Node n = head;
+		while(n.next!=null) {
+			n = n.next;
+			top++;
+		}
+		top++;
+		return top;
 	}
 	
 	public boolean isEmpty() {
-		return size==0;
+		return (head==null);
 	}
 	
 	public void show() {
-		for (int i=0; i<size; i++) {
-			System.out.print(queue[front+i] + " ");
-		}
-		System.out.println(" ");
+        if (head == null) {
+        	System.out.printf("\nStack is empty.");
+        } 
+        else {
+            Node temp = head;
+            while (temp != null) {
+                System.out.printf("%s ", temp.data);
+                temp = temp.next;
+            }
+            System.out.println("");
+        }
 	}
 }
