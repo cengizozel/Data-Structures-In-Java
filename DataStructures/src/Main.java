@@ -86,7 +86,7 @@ public class Main {
 		nbt.createNBinaryTree();
 		*/
 		
-		
+		/*
 		// Hash Table
 		HashTable theFunc = new HashTable(30);
 
@@ -112,6 +112,11 @@ public class Main {
 		theFunc.findKey("660");
 
 		theFunc.displayTheStack();
+		*/
+		
+		// JavaDS.javaDS_Demo();
+		
+		Graph.demo();
 		
 	}
 }
