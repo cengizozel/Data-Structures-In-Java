@@ -29,5 +29,8 @@ public class NonbinaryTree {
 		}
 	}
 	
-	
+	public static void nbtDemo() {
+		NonbinaryTree nbt = new NonbinaryTree();
+		nbt.createNBinaryTree();
+	}
 }

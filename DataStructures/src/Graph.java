@@ -43,7 +43,7 @@ public class Graph {
 		return result;
 	}
 	
-	public static void demo() {
+	public static void graphDemo() {
 
 		Graph g = new Graph(10);
 		

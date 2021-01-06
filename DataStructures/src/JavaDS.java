@@ -11,47 +11,91 @@ import java.util.Queue;
 public class JavaDS {
 	
 	public static void linkedList() {
-		LinkedList<String> ll = new LinkedList<String>();
+        System.out.println("- LinkedList");
+
+		System.out.println("\n Creating LinkedList");
+		LinkedList<Integer> list = new LinkedList<Integer>();
 		
-        ll.add("A");
-        ll.add("B");
-        ll.addLast("C");
-        ll.addFirst("D");
-        ll.add(2, "E");
- 
-        System.out.println(ll);
- 
-        ll.remove("B");
-        ll.remove(3);
-        ll.removeFirst();
-        ll.removeLast();
- 
-        System.out.println(ll);
+		System.out.println("\nIs LinkedList empty: " + list.isEmpty());
+		
+		System.out.println("\nAdding 1");
+		list.add(1);
+		
+		System.out.println("Adding 2");
+        list.add(2);
+        
+		System.out.println("Adding 3");
+        list.add(3);
+        
+		System.out.println("\nPrinting List");
+        System.out.println(list);
+        
+		System.out.println("\nRemoving Last");
+        list.removeLast();
+        
+		System.out.println("\nPrinting List");
+        System.out.println(list);
+        
+		System.out.println("\nIs LinkedList empty: " + list.isEmpty());
 	}
 	
 	public static void stacks() {
-		Stack<String> games = new Stack<String>();
+        System.out.println("\n- Stack");
+
+        System.out.println("\nCreating Stack");
+		Stack<Integer> stack = new Stack<Integer>();
 		
-		games.add("cod");
-		games.add("minecraft");
-		games.add("doom");
+		System.out.println("\nIs stack empty: " + stack.isEmpty());
+
+        System.out.println("\nPushing 1");
+        stack.add(1);
+
+        System.out.println("Pushing 2");
+        stack.add(2);
+
+        System.out.println("Pushing 3");
+        stack.add(3);
 		
-		games.pop();
+		System.out.println("\nPrinting Stack");
+        System.out.println(stack);
 		
-		System.out.println(games);
+        System.out.println("\nPopping");
+        stack.pop();
+        
+		System.out.println("\nPrinting Stack");
+        System.out.println(stack);
+        
+		System.out.println("\nIs stack empty: " + stack.isEmpty());	
 	}
 	
 	public static void queues() {
-		Queue<String> games2 = new LinkedList<String>();
 		
-		games2.add("cod");
-		games2.add("minecraft");
-		games2.add("doom");
+        System.out.println("\n- Queue");
+
+        System.out.println("\nCreating Queue");
+		Queue<Integer> queue = new LinkedList<Integer>();
 		
-		games2.poll();
-	
-		System.out.println(games2);
+		System.out.println("\nIs queue empty: " + queue.isEmpty());
+
+        System.out.println("\nEnqueueing 1");
+        queue.add(1);
+
+        System.out.println("Enqueueing 2");
+        queue.add(2);
+
+        System.out.println("Enqueueing 3");
+        queue.add(3);
 		
+		System.out.println("\nPrinting Queue");
+        System.out.println(queue);
+		
+        System.out.println("\nDequeueing");
+        queue.remove();
+        
+		System.out.println("\nPrinting Queue");
+        System.out.println(queue);
+        
+		System.out.println("\nIs queue empty: " + queue.isEmpty());	
 	}
 	
 	public static void javaDS_Demo() {
@@ -59,5 +103,4 @@ public class JavaDS {
 		stacks();
 		queues();
 	}
-
 }

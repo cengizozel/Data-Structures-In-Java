@@ -1,15 +1,18 @@
 public class BinaryTree {
 	
+	// Binary so always two branches - left and right with their data
 	class BTreeNode {
 		BTreeNode left;
 		BTreeNode right;
 		int data;
 		
+		// You can define the data for the branch (which can have its own branches too)
 		public BTreeNode(int data) {
 			this.data = data;
 		}
 	}
 	
+	// Initiate it with root node.
 	BTreeNode root;
 	
 	public void createBinaryTree() {
@@ -26,6 +29,8 @@ public class BinaryTree {
 		second.left = fourth;
 		second.right = fifth;
 	}
+	
+	// Various order methods using recursive programming
 	
 	public void preOrder(BTreeNode root) {
 		if(root == null) {
@@ -69,19 +74,18 @@ public class BinaryTree {
         }
     }
  
-    /* Compute the "height" of a tree -- the number of
-    nodes along the longest path from the root node
-    down to the farthest leaf node.*/
+	// Height of the tree. Length from root node to lowest leave node.
     int height(BTreeNode root)
     {
         if (root == null)
            return 0;
         else {
-            /* compute  height of each subtree */
-            int lheight = height(root.left); // The method for counting: Once false is return, it keeps incrementing until we get back to the root.
+            // Compute  height of each subtree
+        	// The method for counting: Once false is return, it keeps incrementing until we get back to the root
+            int lheight = height(root.left); 
             int rheight = height(root.right);
              
-            /* use the larger one */
+            // Takes the larger one
             if (lheight > rheight) {
                 return(lheight+1);
             }
@@ -104,4 +108,32 @@ public class BinaryTree {
         }
     }
     
+    public static void btDemo() {
+		BinaryTree bt = new BinaryTree();
+		
+		System.out.println("Creating Binary Tree");
+		bt.createBinaryTree();
+		
+		System.out.println("\nPrinting Binary Tree");
+		System.out.println("    1");
+		System.out.println("   / \\");
+		System.out.println("  2   3");
+		System.out.println(" / \\");
+		System.out.println("4   5");
+
+		System.out.println("\nPreorder");
+		bt.preOrder(bt.root);
+		System.out.println(" ");
+		
+		System.out.println("\nInorder");
+		bt.inOrder(bt.root);
+		System.out.println(" ");
+		
+		System.out.println("\nPostorder");
+		bt.postOrder(bt.root);
+		System.out.println(" ");
+		
+		System.out.println("\nLevel Order");
+		bt.levelOrder(bt.root);
+    }
 }

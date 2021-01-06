@@ -70,4 +70,32 @@ public class Stack {
             System.out.println("");
         }
 	}
+	
+	public static void stackImpDemo() {
+
+        System.out.println("Creating Stack");
+		Stack stack = new Stack();
+		
+		System.out.println("\nIs stack empty: " + stack.isEmpty());
+
+        System.out.println("\nPushing 1");
+        stack.push(1);
+
+        System.out.println("Pushing 2");
+        stack.push(2);
+
+        System.out.println("Pushing 3");
+        stack.push(3);
+		
+		System.out.println("\nPrinting Stack");
+		stack.show();
+		
+        System.out.println("\nPopping");
+        stack.pop();
+        
+		System.out.println("\nPrinting Stack");
+		stack.show();
+        
+		System.out.println("\nIs stack empty: " + stack.isEmpty());
+	}
 }

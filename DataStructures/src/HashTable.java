@@ -154,16 +154,39 @@ public class HashTable {
 							.print(String.format("| %3s " + " ", theArray[n]));
 
 			}
-
 			System.out.println("|");
 
 			for (int n = 0; n < 71; n++)
 				System.out.print("-");
 
 			System.out.println();
-
 		}
-
 	}
+	
+	public static void hashtableDemo() {
+		HashTable theFunc = new HashTable(30);
 
+		// Simplest Hash Function
+
+		// String[] elementsToAdd = { "1", "5", "17", "21", "26" };
+
+		// theFunc.hashFunction1(elementsToAdd, theFunc.theArray);
+
+		// Mod Hash Function
+		// This contains exactly 30 items to show how collisions
+		// will work
+
+		String[] elementsToAdd2 = { "100", "510", "170", "214", "268", "398",
+				"235", "802", "900", "723", "699", "1", "16", "999", "890",
+				"725", "998", "978", "988", "990", "989", "984", "320", "321",
+				"400", "415", "450", "50", "660", "624" };
+
+		theFunc.hashFunction2(elementsToAdd2, theFunc.theArray);
+
+		// Locate the value 660 in the Hash Table
+
+		theFunc.findKey("660");
+
+		theFunc.displayTheStack();
+	}
 }

@@ -1,3 +1,5 @@
+import java.util.LinkedList;
+
 public class Queue {
 	 
 	Node head;
@@ -51,5 +53,33 @@ public class Queue {
             }
             System.out.println("");
         }
+	}
+	
+	public static void queueImpDemo() {
+		
+        System.out.println("Creating Queue");
+		Queue queue = new Queue();
+		
+		System.out.println("\nIs queue empty: " + queue.isEmpty());
+
+        System.out.println("\nEnqueueing 1");
+        queue.enQueue(1);
+
+        System.out.println("Enqueueing 2");
+        queue.enQueue(2);
+
+        System.out.println("Enqueueing 3");
+        queue.enQueue(3);
+		
+		System.out.println("\nPrinting Queue");
+		queue.show();
+		
+        System.out.println("\nDequeueing");
+        queue.deQueue();
+        
+		System.out.println("\nPrinting Queue");
+		queue.show();
+        
+		System.out.println("\nIs queue empty: " + queue.isEmpty());
 	}
 }

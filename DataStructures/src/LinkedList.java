@@ -67,4 +67,32 @@ public class LinkedList {
 		}
 		System.out.println(node.data + "\n");
 	}
+	
+	public static void linkedListImpDemo() {
+		
+		System.out.println("Creating LinkedList");
+		LinkedList list = new LinkedList();
+		
+		//System.out.println("\nIs LinkedList empty: " + list.isEmpty());
+		
+		System.out.println("\nAdding 1");
+		list.insert(1);
+		
+		System.out.println("Adding 2");
+        list.insert(2);
+        
+		System.out.println("Adding 3");
+        list.insert(3);
+        
+		System.out.println("\nPrinting List");
+		list.show();
+		
+		System.out.println("Removing Last");
+		list.deleteAt(2);
+        
+		System.out.println("\nPrinting List");
+		list.show();
+		
+		//System.out.println("\nIs LinkedList empty: " + list.isEmpty());
+	}
 }
