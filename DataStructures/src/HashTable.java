@@ -1,3 +1,8 @@
+/*
+ * Author: Derek Banas
+ * I keep this code here for quick reference and learning purposes.
+ */
+
 import java.util.Arrays;
 
 // If we think of a Hash Table as an array
@@ -50,8 +55,7 @@ public class HashTable {
 
 			int arrayIndex = Integer.parseInt(newElementVal) % 29;
 
-			System.out.println("Modulus Index= " + arrayIndex + " for value "
-					+ newElementVal);
+			System.out.println("Modulus Index = " + arrayIndex + " for value " + newElementVal);
 
 			// Cycle through the array until we find an empty space
 
@@ -62,15 +66,11 @@ public class HashTable {
 				System.out.println("Collision Try " + arrayIndex + " Instead");
 
 				// If we get to the end of the array go back to index 0
-
 				arrayIndex %= arraySize;
 
 			}
-
 			theArray[arrayIndex] = newElementVal;
-
 		}
-
 	}
 
 	// Returns the value stored in the Hash Table
@@ -83,47 +83,31 @@ public class HashTable {
 		while (theArray[arrayIndexHash] != "-1") {
 
 			if (theArray[arrayIndexHash] == key) {
-
 				// Found the key so return it
-				System.out.println(key + " was found in index "
-						+ arrayIndexHash);
-
+				System.out.println(key + " was found in index " + arrayIndexHash);
 				return theArray[arrayIndexHash];
-
 			}
 
 			// Look in the next index
-
 			++arrayIndexHash;
 
 			// If we get to the end of the array go back to index 0
-
 			arrayIndexHash %= arraySize;
-
 		}
-
 		// Couldn't locate the key
-
 		return null;
-
 	}
 
 	HashTable(int size) {
-
 		arraySize = size;
-
 		theArray = new String[size];
-
 		Arrays.fill(theArray, "-1");
-
 	}
 
 	public void displayTheStack() {
-
 		int increment = 0;
 
 		for (int m = 0; m < 3; m++) {
-
 			increment += 10;
 
 			for (int n = 0; n < 71; n++)
@@ -132,9 +116,7 @@ public class HashTable {
 			System.out.println();
 
 			for (int n = increment - 10; n < increment; n++) {
-
 				System.out.format("| %3s " + " ", n);
-
 			}
 
 			System.out.println("|");
@@ -145,20 +127,16 @@ public class HashTable {
 			System.out.println();
 
 			for (int n = increment - 10; n < increment; n++) {
-
 				if (theArray[n].equals("-1"))
 					System.out.print("|      ");
-
 				else
-					System.out
-							.print(String.format("| %3s " + " ", theArray[n]));
-
+					System.out.print(String.format("| %3s " + " ", theArray[n]));
 			}
 			System.out.println("|");
 
-			for (int n = 0; n < 71; n++)
+			for (int n = 0; n < 71; n++) {
 				System.out.print("-");
-
+			}
 			System.out.println();
 		}
 	}

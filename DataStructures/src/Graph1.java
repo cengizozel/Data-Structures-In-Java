@@ -1,6 +1,6 @@
 import java.util.LinkedList;
 
-public class Graph {
+public class Graph1 {
 	
 	class Edge {
 		int v,w;
@@ -14,7 +14,7 @@ public class Graph {
 		}
 	}
 	LinkedList<Edge> G[];
-	public Graph(int n) {
+	public Graph1(int n) {
 		G = new LinkedList[n];
 		for(int i = 0; i < G.length; i++) {
 			G[i] = new LinkedList<Edge>();
@@ -45,7 +45,7 @@ public class Graph {
 	
 	public static void graphDemo() {
 
-		Graph g = new Graph(10);
+		Graph1 g = new Graph1(10);
 		
 		g.addEdge(0, 2, 10);
 		g.addEdge(5, 6, 7);

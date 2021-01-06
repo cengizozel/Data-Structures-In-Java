@@ -13,7 +13,7 @@ public class JavaDS {
 	public static void linkedList() {
         System.out.println("- LinkedList");
 
-		System.out.println("\n Creating LinkedList");
+		System.out.println("\nCreating LinkedList");
 		LinkedList<Integer> list = new LinkedList<Integer>();
 		
 		System.out.println("\nIs LinkedList empty: " + list.isEmpty());
