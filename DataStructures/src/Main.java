@@ -52,9 +52,20 @@ public class Main {
 		printLine();
 		
 		// Graph
-		System.out.println("Graph using LinkedLists");
-		System.out.println("-----------------------\n");
-		Graph1.graphDemo();
+		System.out.println("Graph using Adjacency List");
+		System.out.println("--------------------------\n");
+		Graph1.graph1Demo();
+		printLine();
+		
+		System.out.println("Graph using Adjacency List improved with Hashmap");
+		System.out.println("------------------------------------------------\n");
+		Graph2.graph2Demo();
+		printLine();
+		
+		
+		System.out.println("Graph using Adjacency Matrix");
+		System.out.println("----------------------------\n");
+		Graph3.graph3Demo();
 		printLine();
 	}
  

@@ -14,6 +14,7 @@ public class Graph1 {
 		}
 	}
 	LinkedList<Edge> G[];
+	@SuppressWarnings("unchecked")
 	public Graph1(int n) {
 		G = new LinkedList[n];
 		for(int i = 0; i < G.length; i++) {
@@ -43,7 +44,7 @@ public class Graph1 {
 		return result;
 	}
 	
-	public static void graphDemo() {
+	public static void graph1Demo() {
 
 		Graph1 g = new Graph1(10);
 		
